@@ -24,16 +24,23 @@ ul {
 
 body {
   background: #f4f4f4;
+  background-image: url("./assets/noise.png");
   font-family: "Times New Roman", Times, serif;
   color: rgba(56, 56, 56, 0.9);
   overflow: hidden;
 }
 
-.image-container {
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.image-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
   width: 100vw;
 }
 
@@ -44,40 +51,24 @@ body {
 
 .title {
   position: absolute;
-  top: 50%;
+  margin-top: calc(100vw / clamp(1, 10, 20));
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: clamp(2rem, 30vw + 1rem, 40rem);
+  font-size: clamp(2rem, 10.967vw + -2.113rem, 40rem);
   font-weight: lighter;
   z-index: -1;
 }
 
 .song-list {
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping of items */
-  gap: 10px; /* Space between items */
-  list-style-type: none; /* Remove bullets */
-  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 1fr;
 }
 
 .song-list li {
-  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-size: clamp(1rem, 0.866vw + 0.675rem, 4rem);
   margin-bottom: 1rem;
   font-weight: lighter;
-  overflow-wrap: break-word; /* Ensures that long text wraps properly */
-}
-
-/* md */
-@media (min-width: 48em) {
-}
-
-/* lg */
-@media (min-width: 64em) {
-}
-
-/* xl */
-@media (min-width: 80em) {
-  .image-container {
-    width: 40vw;
-  }
+  white-space: nowrap;
+  padding-right: 2rem;
 }
