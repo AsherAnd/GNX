@@ -26,6 +26,10 @@ body {
   align-items: center;
 }
 
+.char {
+  display: inline-block;
+}
+
 .image-container {
   width: 100vw;
   display: flex;
@@ -44,6 +48,7 @@ body {
   font-size: clamp(4rem, 0.2727272727272734rem + 18.636363636363633vw, 45rem);
   font-weight: lighter;
   margin-bottom: -8%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
 .song-list {
